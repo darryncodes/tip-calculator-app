@@ -32,3 +32,38 @@
 // total bill per person
 // bill per person = bill / number of people
 // tip amount + bill per person
+
+/*
+selecting these items to add active and error classes:
+
+const btnTip = document.querySelector('.btn--tip');
+const splitterBill = document.querySelector('.splitter__bill');
+const splitterPeople = document.querySelector('.splitter__people');
+const error = document.querySelector('.splitter__error');
+
+*/
+
+/*
+aiming to select all tip bts, loop over them and do math from their data id
+
+const btns = document.getElementById('btn');
+
+btns.forEach(function (btn) {
+  btn.addEventListener('click', function (e) {
+    const id = e.target.dataset.id;
+  });
+});
+*/
+
+/*
+
+prevent form from submitting
+
+const form = document.getElementById('form');
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+});
+
+
+*/
