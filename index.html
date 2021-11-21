@@ -18,51 +18,61 @@
 </head>
 
 <body>
-
+    <h1 class="h1">spli<br />tter</h1>
     <main class="splitter">
         <form id="form" class="splitter__form">
-            <div class="splitter__bill">
-                <label for="bill">Bill</label>
-                <input type="number" name="bill" id="bill">
+            <div class="splitter__input splitter__input--bill">
+                <h2 class="splitter__heading">Bill</h2>
+                <label for="bill" class="sr-only">Bill</label>
+                <input type="number" name="bill" id="bill" class="splitter__bill" placeholder="142.55">
             </div>
-            <div class="splitter__tip">
-                <button type="button" class="btn btn--tip" id="btn" value="5">5%</button>
-                <button type="button" class="btn btn--tip" id="btn" value="10">10%</button>
-                <button type="button" class="btn btn--tip" id="btn" value="15">15%</button>
-                <button type="button" class="btn btn--tip" id="btn" value="25">25%</button>
-                <button type="button" class="btn btn--tip" id="btn" value="50">50%</button>
-                <div class="splitter__custom">
-                    <label for="custom">Custom</label>
-                    <input type="number" name="custom" id="custom">
+            <div>
+                <h2 class="splitter__heading">Select Tip %</h2>
+                <div class="splitter__input splitter__input--tip">
+                    <button type="button" class="btn btn--tip" id="btn" value="5">5%</button>
+                    <button type="button" class="btn btn--tip" id="btn" value="10">10%</button>
+                    <button type="button" class="btn btn--tip" id="btn" value="15">15%</button>
+                    <button type="button" class="btn btn--tip " id="btn" value="25">25%</button>
+                    <button type="button" class="btn btn--tip" id="btn" value="50">50%</button>
+                    <div>
+                        <label for="custom" class="sr-only">Custom</label>
+                        <input type="number" name="custom" id="custom" class="splitter__custom" placeholder="Custom">
+                    </div>
                 </div>
             </div>
-            <div class="splitter__people">
-                <label for="people">Number of People</label>
-                <input type="number" name="people" id="people">
+            <div class="splitter__input splitter__input--people">
+                <h2 class="splitter__heading">Number of People</h2>
+                <label for="people" class="sr-only">Number of People</label>
+                <input type="number" name="people" id="people" class="splitter__people" placeholder="5">
+                <small class="splitter__error">Can't be zero</small>
             </div>
         </form>
         <div class="tip">
             <div>
                 <div class="tip__card">
-                    <div>
+                    <div class="tip__content">
                         <p class="tip__heading">Tip Amount</p>
                         <p class="tip__text">/ person</p>
                     </div>
-                    <div class="tip__amount" id="amount"></div>
+                    <div class="tip__amount" id="amount">$4.27</div>
                 </div>
                 <div class="tip__card">
-                    <p class="tip__heading">Total</p>
-                    <p class="tip__text">/ person</p>
+                    <div class="tip__content">
+                        <p class="tip__heading">Total</p>
+                        <p class="tip__text">/ person</p>
+                    </div>
+                    <div class="tip__total" id="total">$32.79</div>
                 </div>
-                <div class="tip__total" id="total"></div>
             </div>
-            <button type="button" class="btn btn--rest">Reset</button>
+            <button type="button" class="btn btn--reset">Reset</button>
         </div>
     </main>
 
     <footer class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="#">Your Name Here</a>.
+        <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" class="attribution__link"
+                target="_blank">Frontend
+                Mentor</a>.
+            Coded by <a href="https://www.darryncodes.co.uk/" class="attribution__link">@darryncodes</a>.</p>
     </footer>
 
     <script src="js/app.js"></script>

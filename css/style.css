@@ -1,11 +1,6 @@
 html {
   font-size: 50%;
 }
-@media only screen and (min-width: 37.5em) {
-  html {
-    font-size: 56.25%;
-  }
-}
 @media only screen and (min-width: 56.25em) {
   html {
     font-size: 62.5%;
@@ -14,11 +9,46 @@ html {
 
 body {
   font-family: "Space Mono", monospace;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 2.4rem;
   letter-spacing: 1px;
-  color: #00494d;
+  color: rgba(0, 73, 77, 0.75);
   background-color: #c5e4e7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.attribution {
+  font-size: 1.4rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+.attribution__link {
+  text-decoration: none;
+  color: #26c0ab;
+}
+.attribution__link:hover {
+  text-decoration: underline;
 }
 
 .sr-only {
@@ -110,4 +140,167 @@ select {
             transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+.btn {
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+  padding: 1rem 0;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn--tip {
+  color: white;
+  background-color: #00494d;
+}
+.btn--reset {
+  text-transform: uppercase;
+  width: 100%;
+  background-color: #26c0ab;
+  margin-top: 4rem;
+  -webkit-transition: ease-in 0.3s;
+  transition: ease-in 0.3s;
+}
+.btn--reset:hover {
+  background-color: #92dfd5;
+}
+
+.btn.btn--active {
+  color: #00494d;
+  background-color: #92dfd5;
+}
+
+.splitter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4rem;
+  max-width: 50rem;
+  background: white;
+  padding: 3rem;
+  border-radius: 2rem;
+}
+.splitter__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+.splitter__heading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.splitter__bill, .splitter__custom, .splitter__people {
+  width: 100%;
+  border: none;
+  border-radius: 0.4rem;
+  outline: none;
+  background-color: #f4fafa;
+  padding: 1rem;
+  text-align: right;
+  cursor: pointer;
+  position: relative;
+}
+.splitter__input {
+  position: relative;
+}
+.splitter__input--bill::before, .splitter__input--people::before {
+  content: "";
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  height: 2rem;
+  width: 2rem;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+.splitter__input--bill::before {
+  background-image: url("../../img/icon-dollar.svg");
+}
+.splitter__input--people::before {
+  background-image: url("../../img/icon-person.svg");
+}
+.splitter__input--tip {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+}
+.splitter__error {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.4rem;
+  color: #f93943;
+  display: none;
+}
+
+::-webkit-input-placeholder {
+  color: #00494d;
+}
+
+::-moz-placeholder {
+  color: #00494d;
+}
+
+:-ms-input-placeholder {
+  color: #00494d;
+}
+
+::-ms-input-placeholder {
+  color: #00494d;
+}
+
+::placeholder {
+  color: #00494d;
+}
+
+.splitter__bill.active--border {
+  border: 2px solid #92dfd5;
+}
+
+.splitter__people.error--border {
+  border: 2px solid #f93943;
+}
+
+.splitter__error.error {
+  display: block;
+}
+
+.tip {
+  background: #00494d;
+  padding: 3rem;
+  border-radius: 2rem;
+}
+.tip__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #f4fafa;
+}
+.tip__content {
+  margin-bottom: 2rem;
+}
+.tip__heading {
+  font-size: 2rem;
+}
+.tip__text {
+  color: #7f9c9f;
+  font-size: 1.6rem;
+}
+.tip__amount, .tip__total {
+  color: #26c0ab;
+  font-size: 3rem;
+  font-weight: 700;
 }

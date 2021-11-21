@@ -3,26 +3,33 @@
 $primary: hsl(185, 41%, 84%);
 $secondary: hsl(183, 100%, 15%);
 $accent: hsl(172, 67%, 45%);
+$active: #92dfd5;
 $white: hsl(0, 0%, 100%);
+$red: #f93943;
 
 // Neutral
 
-$dark-grayish-cyan: hsl(186, 14%, 43%);
 $dark-grayish-cyan: hsl(184, 14%, 56%);
 $light-grayish-cyan: hsl(189, 41%, 97%);
 
+// Style
+
+$btn-radius: 0.4rem;
+$radius: 2rem;
+$padding: 3rem;
+
 // Responsive breakpoints
 
-$bp-large-desktop: 68.75em; // 1100px
+// $bp-large-desktop: 68.75em; // 1100px
 $bp-desktop: 56.25em; // 900px
-$bp-tablet: 37.5em; // 600px
+// $bp-tablet: 37.5em; // 600px
 
 html {
   font-size: 50%;
 
-  @media only screen and (min-width: $bp-tablet) {
-    font-size: 56.25%;
-  }
+  //   @media only screen and (min-width: $bp-tablet) {
+  //     font-size: 56.25%;
+  //   }
 
   @media only screen and (min-width: $bp-desktop) {
     font-size: 62.5%;
@@ -31,9 +38,40 @@ html {
 
 body {
   font-family: 'Space Mono', monospace;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 2.4rem;
   letter-spacing: 1px;
-  color: $secondary;
+  color: rgba($secondary, 0.75);
   background-color: $primary;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  //   padding: 0 1rem;
+}
+
+.h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.attribution {
+  font-size: 1.4rem;
+  margin: 2rem 0;
+  text-align: center;
+
+  &__link {
+    text-decoration: none;
+    color: $accent;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

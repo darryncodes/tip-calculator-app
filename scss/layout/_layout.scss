@@ -1,1 +1,132 @@
 @use '../base/base' as *;
+
+.splitter {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  max-width: 50rem;
+
+  background: $white;
+  padding: $padding;
+  border-radius: $radius;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__heading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__bill,
+  &__custom,
+  &__people {
+    width: 100%;
+    border: none;
+    border-radius: $btn-radius;
+    outline: none;
+    background-color: $light-grayish-cyan;
+    padding: 1rem;
+    text-align: right;
+    cursor: pointer;
+
+    position: relative;
+  }
+
+  &__input {
+    position: relative;
+
+    &--bill::before,
+    &--people::before {
+      content: '';
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      height: 2rem;
+      width: 2rem;
+      background-repeat: no-repeat;
+      z-index: 1;
+    }
+
+    &--bill::before {
+      background-image: url('../../img/icon-dollar.svg');
+    }
+
+    &--people::before {
+      background-image: url('../../img/icon-person.svg');
+    }
+
+    &--tip {
+      display: grid;
+      grid-gap: 2rem;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(3, 1fr);
+    }
+  }
+
+  &__error {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.4rem;
+    color: $red;
+    display: none;
+  }
+}
+
+// input placeholder color
+
+::placeholder {
+  color: $secondary;
+}
+
+//error and active styling for javascript
+
+.splitter__bill.active--border {
+  border: 2px solid $active;
+}
+
+.splitter__people.error--border {
+  border: 2px solid $red;
+}
+
+.splitter__error.error {
+  display: block;
+}
+
+// tip styling
+
+.tip {
+  background: $secondary;
+  padding: $padding;
+  border-radius: $radius;
+
+  &__card {
+    display: flex;
+    justify-content: space-between;
+    color: $light-grayish-cyan;
+  }
+
+  &__content {
+    margin-bottom: 2rem;
+  }
+
+  &__heading {
+    font-size: 2rem;
+  }
+
+  &__text {
+    color: $dark-grayish-cyan;
+    font-size: 1.6rem;
+  }
+
+  &__amount,
+  &__total {
+    color: $accent;
+    font-size: 3rem;
+    font-weight: 700;
+  }
+}
