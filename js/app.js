@@ -1,69 +1,31 @@
-// plan for JS logic
+'use strict';
 
-// select all elments by id
-// or should I be looping over all the inputs?
-// do i need to prevent form from submitting: e.preventDefault();
-// update fields when info gets entered
-// prevent negative numbers?
-// reset all fields
-// add active states
-// add erorr number of people cant be zero
+// SELECT INPUTS
+const bill = document.getElementById('bill');
+const tipBtns = document.querySelectorAll('.btn--tip');
+const tipCustom = document.getElementById('custom');
+const numberOfPeople = document.getElementById('people');
 
-// bill
-// - input field
-// - store value in vairable and make sure its a number
-// parseInt(bill.value); ??
+// SELECT OUTPUTS
 
-// tip
-// - input field
-// - store value in variable
-// - tip.value ??
+const tipAmount = document.getElementById('amount');
+const tipTotal = document.getElementById('total');
 
-// tip amount
-// bill / 100 * tip
+// RESET
 
-// number of people
-// - input field
-// - store value in variable
-
-// tip amount per person
-// tip amount / number of people
-
-// total bill per person
-// bill per person = bill / number of people
-// tip amount + bill per person
+const reset = document.querySelector('.btn--reset');
 
 /*
-selecting these items to add active and error classes:
 
-const btnTip = document.querySelector('.btn--tip');
-const splitterBill = document.querySelector('.splitter__bill');
-const splitterPeople = document.querySelector('.splitter__people');
-const error = document.querySelector('.splitter__error');
+tipBtns.forEach(btn => {
+  btn.addEventListener('click', handleClick);
+});
 
-*/
-
-/*
-aiming to select all tip bts, loop over them and do math from their data id
-
-const btns = document.getElementById('btn');
-
-btns.forEach(function (btn) {
-  btn.addEventListener('click', function (e) {
-    const id = e.target.dataset.id;
+function handleClick(e) {
+  tipBtns.forEach(btn => {
+    btn.classList.remove('btn--active');
   });
-});
-*/
-
-/*
-
-prevent form from submitting
-
-const form = document.getElementById('form');
-
-form.addEventListener('submit', function (e) {
-  e.preventDefault();
-});
-
+  e.currentTarget.classList.add('btn--active');
+}
 
 */

@@ -18,21 +18,15 @@ $btn-radius: 0.4rem;
 $radius: 2rem;
 $padding: 3rem;
 
-// Responsive breakpoints
+// Responsive breakpoint
 
-// $bp-large-desktop: 68.75em; // 1100px
 $bp-desktop: 56.25em; // 900px
-// $bp-tablet: 37.5em; // 600px
 
 html {
-  font-size: 50%;
-
-  //   @media only screen and (min-width: $bp-tablet) {
-  //     font-size: 56.25%;
-  //   }
+  font-size: 50%; //1rem = 8px
 
   @media only screen and (min-width: $bp-desktop) {
-    font-size: 62.5%;
+    font-size: 62.5%; //1rem = 10px
   }
 }
 
@@ -48,6 +42,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  padding: 5rem 0;
 
   @media only screen and (min-width: $bp-desktop) {
     font-size: 2rem;

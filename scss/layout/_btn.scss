@@ -30,6 +30,10 @@
   }
 }
 
+input[type='radio'] {
+  appearance: none;
+}
+
 // tip btn actuve class
 
 .btn--tip.btn--active {
