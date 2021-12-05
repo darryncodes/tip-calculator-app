@@ -267,10 +267,10 @@ input[type=radio] {
   z-index: 1;
 }
 .splitter__input--bill::before {
-  background-image: url("../../img/icon-dollar.svg");
+  background-image: url("../img/icon-dollar.svg");
 }
 .splitter__input--people::before {
-  background-image: url("../../img/icon-person.svg");
+  background-image: url("../img/icon-person.svg");
 }
 .splitter__input--tip {
   display: grid;
