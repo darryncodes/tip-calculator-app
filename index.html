@@ -20,7 +20,7 @@
 <body>
     <h1 class="h1">spli<br />tter</h1>
     <main class="splitter">
-        <form id="form" class="splitter__form">
+        <div class="splitter__form">
             <div class="splitter__input splitter__input--bill">
                 <h2 class="splitter__heading">Bill</h2>
                 <label for="bill" class="sr-only">Bill</label>
@@ -29,12 +29,12 @@
             <div>
                 <h2 class="splitter__heading">Select Tip %</h2>
                 <div class="splitter__input splitter__input--tip">
-                    <!-- <button class="btn btn--tip" id="btn" value="5" data-id="5">5%</button>
-                    <button class="btn btn--tip" id="btn" value="10" data-id="10">10%</button>
-                    <button class="btn btn--tip" id="btn" value="15" data-id="15">15%</button>
-                    <button class="btn btn--tip" id="btn" value="25" data-id="25">25%</button>
-                    <button class="btn btn--tip" id="btn" value="50" data-id="50">50%</button> -->
-                    <label class="btn btn--tip">
+                    <button class="btn btn--tip" id="btn" value="5">5%</button>
+                    <button class="btn btn--tip" id="btn" value="10">10%</button>
+                    <button class="btn btn--tip" id="btn" value="15">15%</button>
+                    <button class="btn btn--tip" id="btn" value="25">25%</button>
+                    <button class="btn btn--tip" id="btn" value="50">50%</button>
+                    <!-- <label class="btn btn--tip">
                         <input type="radio" name="tip" value="5">
                         <span>5%</span>
                     </label>
@@ -44,7 +44,7 @@
                     </label>
                     <label class="btn btn--tip">
                         <input type="radio" name="tip" value="15">
-                        <span>25%</span>
+                        <span>15%</span>
                     </label>
                     <label class="btn btn--tip">
                         <input type="radio" name="tip" value="25">
@@ -53,7 +53,7 @@
                     <label class="btn btn--tip">
                         <input type="radio" name="tip" value="50">
                         <span>50%</span>
-                    </label>
+                    </label> -->
                     <div>
                         <label for="custom" class="sr-only">Custom</label>
                         <input type="number" name="custom" id="custom" class="splitter__custom" placeholder="Custom">
@@ -66,7 +66,7 @@
                 <input type="text" name="people" id="people" class="splitter__people" placeholder="0">
                 <small class="splitter__error">Can't be zero</small>
             </div>
-        </form>
+        </div>
         <div class="tip">
             <div>
                 <div class="tip__card">
