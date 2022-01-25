@@ -76,5 +76,9 @@ body {
     &:hover {
       text-decoration: underline;
     }
+    &:focus {
+      outline: 3px solid $accent;
+      border-radius: $btn-radius;
+    }
   }
 }

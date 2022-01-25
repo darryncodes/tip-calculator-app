@@ -11,6 +11,11 @@
   &--tip {
     color: $white;
     background-color: $secondary;
+
+    &:focus {
+      outline: 3px solid $accent;
+      border-radius: $btn-radius;
+    }
   }
 
   &--reset {
@@ -26,6 +31,11 @@
 
     &:hover {
       background-color: $active;
+    }
+
+    &:focus {
+      outline: 3px solid $active;
+      border-radius: $btn-radius;
     }
   }
 }

@@ -62,6 +62,10 @@ body {
 .attribution__link:hover {
   text-decoration: underline;
 }
+.attribution__link:focus {
+  outline: 3px solid #26c0ab;
+  border-radius: 0.4rem;
+}
 
 .sr-only {
   position: absolute;
@@ -165,6 +169,10 @@ select {
   color: white;
   background-color: #00494d;
 }
+.btn--tip:focus {
+  outline: 3px solid #26c0ab;
+  border-radius: 0.4rem;
+}
 .btn--reset {
   text-transform: uppercase;
   width: 100%;
@@ -180,6 +188,10 @@ select {
 }
 .btn--reset:hover {
   background-color: #92dfd5;
+}
+.btn--reset:focus {
+  outline: 3px solid #92dfd5;
+  border-radius: 0.4rem;
 }
 
 input[type=radio] {
@@ -247,11 +259,19 @@ input[type=radio] {
   cursor: pointer;
   position: relative;
 }
+.splitter__bill:focus, .splitter__custom:focus, .splitter__people:focus {
+  outline: 3px solid #26c0ab;
+  border-radius: 0.4rem;
+}
 @media only screen and (min-width: 56.25em) {
   .splitter__custom {
     font-size: 1.8rem;
     padding: 1.2rem 0;
   }
+}
+.splitter__custom:focus {
+  outline: 3px solid #26c0ab;
+  border-radius: 0.4rem;
 }
 .splitter__input {
   position: relative;
