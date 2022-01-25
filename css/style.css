@@ -63,7 +63,7 @@ body {
   text-decoration: underline;
 }
 .attribution__link:focus {
-  outline: 3px solid #26c0ab;
+  outline: 3px solid #92dfd5;
   border-radius: 0.4rem;
 }
 
@@ -170,8 +170,11 @@ select {
   background-color: #00494d;
 }
 .btn--tip:focus {
-  outline: 3px solid #26c0ab;
+  outline: 3px solid #92dfd5;
   border-radius: 0.4rem;
+}
+.btn--tip:hover {
+  background-color: #92dfd5;
 }
 .btn--reset {
   text-transform: uppercase;
@@ -259,8 +262,8 @@ input[type=radio] {
   cursor: pointer;
   position: relative;
 }
-.splitter__bill:focus, .splitter__custom:focus, .splitter__people:focus {
-  outline: 3px solid #26c0ab;
+.splitter__bill:focus, .splitter__bill:hover, .splitter__custom:focus, .splitter__custom:hover, .splitter__people:focus, .splitter__people:hover {
+  outline: 3px solid #92dfd5;
   border-radius: 0.4rem;
 }
 @media only screen and (min-width: 56.25em) {
@@ -268,10 +271,6 @@ input[type=radio] {
     font-size: 1.8rem;
     padding: 1.2rem 0;
   }
-}
-.splitter__custom:focus {
-  outline: 3px solid #26c0ab;
-  border-radius: 0.4rem;
 }
 .splitter__input {
   position: relative;

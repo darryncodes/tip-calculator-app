@@ -15,7 +15,7 @@ const reset = document.querySelector('.btn--reset');
 let billValue = 0.0;
 let tipValue = 0;
 let customValue = 0;
-let peopleValue = 1;
+// let peopleValue = 1;
 
 // GET BILL VALUE
 function handleBillInput(e) {

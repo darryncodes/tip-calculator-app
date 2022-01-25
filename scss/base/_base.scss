@@ -77,7 +77,7 @@ body {
       text-decoration: underline;
     }
     &:focus {
-      outline: 3px solid $accent;
+      outline: 3px solid $active;
       border-radius: $btn-radius;
     }
   }

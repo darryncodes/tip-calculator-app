@@ -13,8 +13,12 @@
     background-color: $secondary;
 
     &:focus {
-      outline: 3px solid $accent;
+      outline: 3px solid $active;
       border-radius: $btn-radius;
+    }
+
+    &:hover {
+      background-color: $active;
     }
   }
 
