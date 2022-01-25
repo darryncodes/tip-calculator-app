@@ -34,6 +34,7 @@
   &__bill,
   &__custom,
   &__people {
+    color: $secondary;
     width: 100%;
     border: none;
     border-radius: $btn-radius;
@@ -109,7 +110,7 @@
 // input placeholder color
 
 ::placeholder {
-  color: $secondary;
+  color: $dark-grayish-cyan;
 }
 
 //error and active styling for javascript
