@@ -10,12 +10,14 @@ const tipAmount = document.getElementById('amount');
 const tipTotal = document.getElementById('total');
 // SELECT RESET
 const reset = document.querySelector('.btn--reset');
+// SELECT ELEMENT FOR ERROR HANDLING
+const error = document.getElementById('error');
 
 // DEFAULT STATES
 let billValue = 0.0;
 let tipValue = 0;
 let customValue = 0;
-// let peopleValue = 1;
+let peopleValue = 1;
 
 // GET BILL VALUE
 function handleBillInput(e) {
@@ -46,6 +48,10 @@ function handleCustomInput(e) {
 // GET NUMBER OF PEOPLE
 function handlePeopleInput(e) {
   peopleValue = parseFloat(e.target.value);
+  if (peopleValue === 0) {
+    numberOfPeople.classList.add('error--border');
+    error.classList.add('error');
+  }
 
   calculateTipAmount();
 }
@@ -54,9 +60,9 @@ function handlePeopleInput(e) {
 function calculateTipAmount() {
   if (peopleValue >= 1) {
     let amount = billValue * (tipValue / 100);
-    tipAmount.textContent = `$${amount}`;
+    tipAmount.textContent = `$${amount.toFixed(2)}`;
     let total = (billValue + amount) / peopleValue;
-    tipTotal.textContent = `$${total}`;
+    tipTotal.textContent = `$${total.toFixed(2)}`;
   }
 }
 

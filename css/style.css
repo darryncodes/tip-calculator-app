@@ -252,6 +252,11 @@ input[type=radio] {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
+@media only screen and (min-width: 56.25em) {
+  .splitter__heading {
+    font-size: 1.8rem;
+  }
+}
 .splitter__bill, .splitter__custom, .splitter__people {
   color: #00494d;
   width: 100%;
@@ -308,11 +313,25 @@ input[type=radio] {
 }
 .splitter__error {
   position: absolute;
-  top: 0;
+  top: 6px;
   right: 0;
   font-size: 1.4rem;
   color: #f93943;
   display: none;
+}
+@media only screen and (min-width: 56.25em) {
+  .splitter__error {
+    top: 8px;
+  }
+}
+
+label {
+  font-size: 2rem;
+}
+@media only screen and (min-width: 56.25em) {
+  label {
+    font-size: 1.8rem;
+  }
 }
 
 ::-webkit-input-placeholder {
@@ -335,12 +354,8 @@ input[type=radio] {
   color: #7f9c9f;
 }
 
-.splitter__bill.active--border {
-  border: 2px solid #92dfd5;
-}
-
-.splitter__people.error--border {
-  border: 2px solid #f93943;
+.splitter__people.error--border:focus {
+  outline: 3px solid #f93943;
 }
 
 .splitter__error.error {

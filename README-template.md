@@ -98,6 +98,8 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 **Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
+- [MDN - .toFixed](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed)
+
 ## Author
 
 - Website - [Add your name here](https://www.your-site.com)

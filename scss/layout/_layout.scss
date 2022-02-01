@@ -29,6 +29,10 @@
   &__heading {
     font-size: 2rem;
     margin-bottom: 1rem;
+
+    @media only screen and (min-width: $bp-desktop) {
+      font-size: 1.8rem;
+    }
   }
 
   &__bill,
@@ -99,11 +103,23 @@
 
   &__error {
     position: absolute;
-    top: 0;
+    top: 6px;
     right: 0;
     font-size: 1.4rem;
     color: $red;
     display: none;
+
+    @media only screen and (min-width: $bp-desktop) {
+      top: 8px;
+    }
+  }
+}
+
+label {
+  font-size: 2rem;
+
+  @media only screen and (min-width: $bp-desktop) {
+    font-size: 1.8rem;
   }
 }
 
@@ -115,12 +131,14 @@
 
 //error and active styling for javascript
 
-.splitter__bill.active--border {
-  border: 2px solid $active;
-}
+// .splitter__bill.active--border {
+//   border: 2px solid $active;
+// }
 
 .splitter__people.error--border {
-  border: 2px solid $red;
+  &:focus {
+    outline: 3px solid $red;
+  }
 }
 
 .splitter__error.error {
