@@ -51,6 +51,9 @@ function handlePeopleInput(e) {
   if (peopleValue === 0) {
     numberOfPeople.classList.add('error--border');
     error.classList.add('error');
+  } else {
+    numberOfPeople.classList.remove('error--border');
+    error.classList.remove('error');
   }
 
   calculateTipAmount();
