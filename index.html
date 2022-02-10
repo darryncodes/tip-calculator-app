@@ -23,7 +23,8 @@
         <div class="splitter__form">
             <div class="splitter__input splitter__input--bill">
                 <label for="bill">Bill</label>
-                <input type="number" name="bill" id="bill" class="splitter__bill" placeholder="0" min="1">
+                <input type="number" name="bill" id="bill" class="splitter__bill" placeholder="0" min="1" maxlength="6"
+                    pattern="\d{10}">
             </div>
             <div>
                 <h2 class="splitter__heading">Select Tip %</h2>
@@ -36,13 +37,14 @@
                     <div>
                         <label for="custom" class="sr-only">Custom</label>
                         <input type="number" name="custom" id="custom" class="splitter__custom btn--tip"
-                            placeholder="Custom" min="0" max="100">
+                            placeholder="Custom" min="0" max="100" maxlength="6" pattern="\d{10}">
                     </div>
                 </div>
             </div>
             <div class="splitter__input splitter__input--people">
                 <label for="people">Number of People</label>
-                <input type="number" name="people" id="people" class="splitter__people" placeholder="0" min="1">
+                <input type="number" name="people" id="people" class="splitter__people" placeholder="0" min="1"
+                    maxlength="4" pattern="\d{10}">
                 <small class="splitter__error" id="error">Can't be zero</small>
             </div>
         </div>
