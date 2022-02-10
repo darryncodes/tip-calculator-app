@@ -8,7 +8,7 @@
   font-weight: 700;
   cursor: pointer;
 
-  &--tip {
+  &--style {
     color: $white;
     background-color: $secondary;
 
@@ -49,9 +49,9 @@ input[type='radio'] {
   appearance: none;
 }
 
-// tip btn actuve class
+// tip btn active class
 
-.btn--tip.btn--active {
+.btn--style.btn--active {
   color: $secondary;
   background-color: $active;
 }

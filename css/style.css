@@ -165,15 +165,15 @@ select {
   font-weight: 700;
   cursor: pointer;
 }
-.btn--tip {
+.btn--style {
   color: white;
   background-color: #00494d;
 }
-.btn--tip:focus {
+.btn--style:focus {
   outline: 3px solid #92dfd5;
   border-radius: 0.4rem;
 }
-.btn--tip:hover {
+.btn--style:hover {
   color: #00494d;
   background-color: #92dfd5;
 }
@@ -204,7 +204,7 @@ input[type=radio] {
           appearance: none;
 }
 
-.btn--tip.btn--active {
+.btn--style.btn--active {
   color: #00494d;
   background-color: #92dfd5;
 }

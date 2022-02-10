@@ -1,32 +1,26 @@
 'use strict';
 
-// SELECT INPUTS
 const bill = document.getElementById('bill');
 const tipBtns = document.querySelectorAll('.btn--tip');
 const tipCustom = document.getElementById('custom');
 const numberOfPeople = document.getElementById('people');
-// SELECT OUTPUTS
+
 const tipAmount = document.getElementById('amount');
 const tipTotal = document.getElementById('total');
-// SELECT RESET
+
 const reset = document.querySelector('.btn--reset');
-// SELECT ELEMENT FOR ERROR HANDLING
 const error = document.getElementById('error');
 
-// DEFAULT STATES
 let billValue = 0.0;
 let tipValue = 0;
-let customValue = 0;
-let peopleValue = 1;
+let peopleValue = 0;
 
-// GET BILL VALUE
 function handleBillInput(e) {
   billValue = parseFloat(e.target.value);
 
   calculateTipAmount();
 }
 
-// GET TIP VALUE
 function handleTipButtons(e) {
   tipValue = parseInt(e.target.value);
 
@@ -38,14 +32,6 @@ function handleTipButtons(e) {
   calculateTipAmount();
 }
 
-// GET CUSTOM TIP
-function handleCustomInput(e) {
-  customValue = parseFloat(e.target.value);
-
-  calculateTipAmount();
-}
-
-// GET NUMBER OF PEOPLE
 function handlePeopleInput(e) {
   peopleValue = parseFloat(e.target.value);
   if (peopleValue === 0) {
@@ -59,7 +45,6 @@ function handlePeopleInput(e) {
   calculateTipAmount();
 }
 
-// CALCULATE TIP
 function calculateTipAmount() {
   if (peopleValue >= 1) {
     let amount = billValue * (tipValue / 100);
@@ -67,25 +52,32 @@ function calculateTipAmount() {
     let total = (billValue + amount) / peopleValue;
     tipTotal.textContent = `$${total.toFixed(2)}`;
   }
+
+  if (tipCustom.value === '' && tipCustom === document.activeElement) {
+    tipAmount.textContent = `$0.00`;
+    tipTotal.textContent = `$0.00`;
+  }
 }
 
-// RESET
 function handleReset() {
-  bill.value = ``;
-  tipCustom.value = 'Custom';
-  tipBtns.forEach(btn => {
-    btn.classList.remove('btn--active');
-  });
+  billValue = 0.0;
+  tipValue = 0;
+  peopleValue = 0;
+
+  bill.value = '';
+  tipCustom.value = '';
   numberOfPeople.value = '';
   tipAmount.textContent = `$0.00`;
   tipTotal.textContent = `$0.00`;
+  tipBtns.forEach(btn => {
+    btn.classList.remove('btn--active');
+  });
 }
 
-// EVENT LISTENERS
 bill.addEventListener('input', handleBillInput);
 tipBtns.forEach(btn => {
   btn.addEventListener('click', handleTipButtons);
+  btn.addEventListener('input', handleTipButtons);
 });
-tipCustom.addEventListener('input', handleCustomInput);
 numberOfPeople.addEventListener('input', handlePeopleInput);
 reset.addEventListener('click', handleReset);

@@ -129,11 +129,7 @@ label {
   color: $dark-grayish-cyan;
 }
 
-//error and active styling for javascript
-
-// .splitter__bill.active--border {
-//   border: 2px solid $active;
-// }
+//error styling for javascript
 
 .splitter__people.error--border {
   &:focus {
