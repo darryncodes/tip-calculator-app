@@ -77,21 +77,19 @@ function handleReset() {
 }
 
 function handleCharacterInput(e) {
-  let charValue = String.fromCharCode(e.keyCode);
-  if (isNaN(charValue) && e.which != 8) {
-    e.preventDefault();
-  }
-  return true;
+  if (e.target)
+    return e.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');
 }
 
-function handleMaxLength(e) {
-  let input = e.target;
-
-  if (input.value > input.maxLength) {
-    input.value = input.value.slice(0, input.maxLength);
+function handleMaxLength() {
+  if (bill.value > 5) {
+    bill.value = bill.value.substr(0, 5);
   }
   if (tipCustom.value > 100) {
     tipCustom.value = 100;
+  }
+  if (numberOfPeople.value > 4) {
+    numberOfPeople.value = numberOfPeople.value.substr(0, 4);
   }
 }
 
@@ -106,3 +104,22 @@ inputs.forEach(input => {
   input.addEventListener('keydown', handleCharacterInput);
   input.addEventListener('input', handleMaxLength);
 });
+
+// function handleCharacterInput(e) {
+//   let charValue = String.fromCharCode(e.keyCode);
+//   if (isNaN(charValue) && e.which != 8) {
+//     e.preventDefault();
+//   }
+//   return true;
+// }
+
+// function handleMaxLength(e) {
+//   let input = e.target;
+
+//   if (input.value > input.maxLength) {
+//     input.value = input.value.slice(0, input.maxLength);
+//   }
+//   if (tipCustom.value > 100) {
+//     tipCustom.value = 100;
+//   }
+// }
