@@ -18,7 +18,7 @@ let tipValue = 0;
 let peopleValue = 0;
 
 function handleBillInput(e) {
-  billValue = parseFloat(e.target.value).toFixed(2);
+  billValue = parseInt(e.target.value, 10);
 
   calculateTipAmount();
 }
@@ -77,8 +77,11 @@ function handleReset() {
 }
 
 function handleCharacterInput(e) {
-  if (e.target)
-    return e.value.replace(/[^0-9.][~`!@#$%^&()_={}[\]:;,.<>+\/?-]/g, '');
+  if (e.target.value)
+    return e.target.value.replace(
+      /[^0+][^0-9.][~`!@#$%^&()_={}[\]:;,.<>+\/?-]/g,
+      ''
+    );
 }
 
 function handleMaxLength() {
@@ -94,32 +97,13 @@ function handleMaxLength() {
 }
 
 bill.addEventListener('input', handleBillInput);
+numberOfPeople.addEventListener('input', handlePeopleInput);
+reset.addEventListener('click', handleReset);
 tipBtns.forEach(btn => {
   btn.addEventListener('click', handleTipButtons);
   btn.addEventListener('input', handleTipButtons);
 });
-numberOfPeople.addEventListener('input', handlePeopleInput);
-reset.addEventListener('click', handleReset);
 inputs.forEach(input => {
   input.addEventListener('keydown', handleCharacterInput);
   input.addEventListener('input', handleMaxLength);
 });
-
-// function handleCharacterInput(e) {
-//   let charValue = String.fromCharCode(e.keyCode);
-//   if (isNaN(charValue) && e.which != 8) {
-//     e.preventDefault();
-//   }
-//   return true;
-// }
-
-// function handleMaxLength(e) {
-//   let input = e.target;
-
-//   if (input.value > input.maxLength) {
-//     input.value = input.value.slice(0, input.maxLength);
-//   }
-//   if (tipCustom.value > 100) {
-//     tipCustom.value = 100;
-//   }
-// }
