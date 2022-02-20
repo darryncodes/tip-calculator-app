@@ -18,7 +18,7 @@ let tipValue = 0;
 let peopleValue = 0;
 
 function handleBillInput(e) {
-  billValue = parseFloat(e.target.value);
+  billValue = parseFloat(e.target.value).toFixed(2);
 
   calculateTipAmount();
 }
@@ -78,7 +78,7 @@ function handleReset() {
 
 function handleCharacterInput(e) {
   if (e.target)
-    return e.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');
+    return e.value.replace(/[^0-9.][~`!@#$%^&()_={}[\]:;,.<>+\/?-]/g, '');
 }
 
 function handleMaxLength() {
